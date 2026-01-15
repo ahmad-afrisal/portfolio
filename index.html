@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Afrisal | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        /* Perbaikan: CSS untuk Animasi Scroll Reveal */
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        .detail-page { display: none; }
+        
+        /* Animasi fade in untuk detail view */
+        .fade-in { animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-[#FBFBFE] text-slate-900 leading-relaxed">
+
+    <main id="main-content">
+        <nav class="fixed w-full z-50 glass-nav border-b border-slate-100">
+            <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+                <span class="text-xl font-extrabold tracking-tighter text-blue-600">A. AFRISAL.</span>
+                <div class="hidden md:flex space-x-10 text-sm font-semibold text-slate-600">
+                    <a href="#about" class="hover:text-blue-600 transition">Profil</a>
+                    <a href="#skills" class="hover:text-blue-600 transition">Keahlian</a>
+                    <a href="#experience" class="hover:text-blue-600 transition">Pengalaman</a>
+                    <a href="#education" class="hover:text-blue-600 transition">Pendidikan</a>
+                </div>
+                <a href="mailto:ahmadafrisal2002@gmail.com" class="px-5 py-2.5 bg-slate-900 text-white text-sm font-bold rounded-full hover:bg-blue-600 transition shadow-sm">
+                    Kontak
+                </a>
+            </div>
+        </nav>
+
+        <section id="about" class="pt-32 pb-24 px-6 reveal">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                
+                <div class="relative w-full md:w-1/2 flex justify-center md:justify-end">
+                    <div class="relative z-20 mt-[-100px] md:mt-[-150px] group">
+                        <div class="absolute inset-0 bg-blue-100 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                        
+                        <img src="images/foto.jpeg" alt="Ahmad Afrisal" 
+                             class="relative z-10 w-auto h-[450px] md:h-[650px] object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-105">
+                        
+                        <div class="absolute top-1/4 -right-8 z-30 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 hidden md:block animate-bounce">
+                             <i data-lucide="award" class="text-yellow-500 w-6 h-6 mb-1"></i>
+                             <p class="text-[10px] font-bold text-slate-800 uppercase">Top Contributor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-100 mb-8 shadow-sm">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+                        </span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-blue-600">Siap Berkontribusi</span>
+                    </div>
+
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 min-h-[1.2em]">
+                        <span id="typed-text"></span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-slate-500 mb-10 max-w-xl">
+                        Lulusan Teknik Informatika dengan minat besar dalam pengembangan perangkat lunak dan analisis data. Berpengalaman dalam menyelesaikan proyek berbasis web dan implementasi algoritma.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                        <a href="https://linkedin.com/in/ahmadafrisal" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://github.com/ahmad-afrisal" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="mailto:ahmadafrisal2002@gmail.com" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                            <i data-lucide="mail"></i>
+                        </a>
+                        <a href="https://medium.com/@official.bangk.id" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                            <i data-lucide="newspaper"></i>
+                        </a>
+                        <a href="https://wa.me/6285156090250" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                            <i data-lucide="message-circle"></i>
+                        </a>
+                        <a href="https://instagram.com/ahmad_afrisal" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@ayysalll" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                            <i data-lucide="music-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="about" class="pt-44 pb-24 px-6 reveal">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-8 relative inline-block">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-3xl overflow-hidden border-4 border-white shadow-2xl mx-auto">
+                        <img src="https://via.placeholder.com/160" alt="Ahmad Afrisal" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-2 -right-2 bg-blue-600 text-white p-2 rounded-xl shadow-lg">
+                        <i data-lucide="code-2" class="w-5 h-5"></i>
+                    </div>
+                </div>
+
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-100 mb-8 shadow-sm">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+                    </span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-blue-600">Siap Berkontribusi</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 min-h-[1.2em]">
+                    <span id="typed-text"></span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-slate-500 mb-10 max-w-2xl mx-auto">
+                    Lulusan Teknik Informatika dengan minat besar dalam pengembangan perangkat lunak dan analisis data. Berpengalaman dalam menyelesaikan proyek berbasis web dan implementasi algoritma.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://linkedin.com/in/ahmadafrisal" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://github.com/ahmad-afrisal" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="mailto:ahmadafrisal2002@gmail.com" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                        <i data-lucide="mail"></i>
+                    </a>
+                    <a href="https://medium.com/@official.bangk.id" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                        <i data-lucide="newspaper"></i>
+                    </a>
+                    <a href="https://wa.me/6285156090250" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                        <i data-lucide="message-circle"></i>
+                    </a>
+                    <a href="https://instagram.com/ahmad_afrisal" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://tiktok.com/@ayysalll" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
+                        <i data-lucide="music-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="skills" class="py-24 px-6 bg-white border-y border-slate-100 reveal">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-extrabold text-center mb-16">Technical Mastery</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:shadow-xl transition duration-500">
+                        <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-200">
+                            <i data-lucide="code-2"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Technical</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white rounded-lg text-xs font-semibold shadow-sm border border-slate-100">PHP</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-xs font-semibold shadow-sm border border-slate-100">Laravel</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-xs font-semibold shadow-sm border border-slate-100">MySQL</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-xs font-semibold shadow-sm border border-slate-100">JavaScript</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-xs font-semibold shadow-sm border border-slate-100">Bootstrap</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-xs font-semibold shadow-sm border border-slate-100">Vite Press</span>
+                        </div>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:shadow-xl transition duration-500">
+                        <div class="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-indigo-200">
+                            <i data-lucide="layout"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Software</h3>
+                        <div class="flex flex-wrap gap-2 text-slate-600">
+                            <span class="px-3 py-1 bg-white rounded-lg text-xs font-semibold border border-slate-100">GIT</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-xs font-semibold border border-slate-100">Notion</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-xs font-semibold border border-slate-100">Clickup</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-xs font-semibold border border-slate-100">Figma</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-xs font-semibold border border-slate-100">MS Office</span>
+                        </div>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:shadow-xl transition duration-500">
+                        <div class="w-12 h-12 bg-slate-900 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-slate-300">
+                            <i data-lucide="terminal"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">OS</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white rounded-lg text-xs font-semibold border border-slate-100">Windows</span>
+                            <span class="px-3 py-1 bg-white rounded-lg text-xs font-semibold border border-slate-100">Kali Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-24 px-6 bg-[#FBFBFE]">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-extrabold mb-16 flex items-center gap-3 reveal">
+                    <i data-lucide="briefcase" class="text-blue-600"></i> Pengalaman
+                </h2>
+                
+                <div class="space-y-12">
+                    <div onclick="showDetail('kemenkop')" class="group relative pl-8 border-l-2 border-blue-100 cursor-pointer transition-all duration-300 reveal">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow-sm group-hover:scale-125 transition-transform"></div>
+                        <p class="text-xs font-bold text-blue-600 uppercase mb-1">Okt 2025 - Des 2025</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors">Project Management Officer</h3>
+                            <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-slate-500 font-medium mb-4">Kementerian Koperasi <span class="text-xs text-blue-400 underline ml-2 opacity-0 group-hover:opacity-100">Lihat Timeline</span></p>
+                        <ul class="text-slate-600 text-sm leading-relaxed space-y-2 list-disc ml-4">
+                            <li>Mengkoordinasikan dan memantau pelaksanaan program Koperasi Merah Putih di tingkat desa dan kecamatan.</li>
+                            <li>Merancang dan mengembangkan sistem pelaporan serta monitoring tingkat kabupaten.</li>
+                        </ul>
+                    </div>
+
+                    <div onclick="showDetail('tonasa')" class="group relative pl-8 border-l-2 border-slate-200 cursor-pointer transition-all duration-300 reveal">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 border-4 border-white shadow-sm group-hover:bg-blue-600 group-hover:scale-125 transition-all"></div>
+                        <p class="text-xs font-bold text-slate-400 uppercase mb-1">Mar 2025 - Ags 2025</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors">Magenta : Web Developer Intern</h3>
+                            <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-slate-500 font-medium mb-4">PT. Semen Tonasa <span class="text-xs text-blue-400 underline ml-2 opacity-0 group-hover:opacity-100">Lihat Timeline</span></p>
+                        <ul class="text-slate-600 text-sm leading-relaxed space-y-2 list-disc ml-4">
+                            <li>Mengembangkan dan mengimplementasikan sistem Human Capital Information System (HCIS).</li>
+                            <li>Melakukan testing dan debugging website secara menyeluruh.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative py-8 reveal">
+                        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                            <div class="w-full border-t border-slate-200"></div>
+                        </div>
+                        <div class="relative flex justify-center">
+                            <span class="bg-[#FBFBFE] px-4 text-xs font-bold text-slate-400 uppercase tracking-[0.3em]">Lulus S1</span>
+                        </div>
+                    </div>
+
+                    <div onclick="showDetail('cemara')" class="group relative pl-8 border-l-2 border-slate-200 cursor-pointer transition-all duration-300 reveal">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 border-4 border-white shadow-sm group-hover:bg-blue-600 group-hover:scale-125 transition-all"></div>
+                        <p class="text-xs font-bold text-slate-400 uppercase mb-1">Jan 2024 – Jun 2024</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors">MBKM Desa Cemara</h3>
+                            <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-slate-500 font-medium mb-4">Kementrian PPN/Bappenas<span class="text-xs text-blue-400 underline ml-2 opacity-0 group-hover:opacity-100">Lihat Timeline</span></p>
+                        <ul class="text-slate-600 text-sm leading-relaxed space-y-2 list-disc ml-4">
+                            <li>Mengikuti program kolaborasi nasional dalam rangka penanggulangan kemiskinan 
+ekstrem di Sulawesi Barat, terkhusus di Desa Rea Kabupaten Polewali Mandar.</li>
+                            <li>Tahap pre-departure: mendapatkan pembekalan tentang analisis masalah sosial, birokrasi 
+pemerintahan, perancangan program kerja, serta strategi implementasi dari dosen dan 
+praktisi. </li>
+ <li>Tahap lapangan: tinggal bersama masyarakat selama 2 bulan untuk mengimplementasikan 
+program kerja yang telah dirancang.</li>
+                            <li>Berhasil melaksanakan program pendampingan masyarakat dalam produksi gula semut, 
+mulai dari pelatihan, pendampingan, hingga pemasaran produk bersama petani lokal.</li>
+                        </ul>
+                    </div>
+
+                    <div onclick="showDetail('kalla')" class="group relative pl-8 border-l-2 border-slate-200 cursor-pointer transition-all duration-300 reveal">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 border-4 border-white shadow-sm group-hover:bg-blue-600 group-hover:scale-125 transition-all"></div>
+                        <p class="text-xs font-bold text-slate-400 uppercase mb-1">Ags 2023 – Des 2023</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors">MSIB Batch 5 : Web Developer Intern</h3>
+                            <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-slate-500 font-medium mb-4">PT. Hadji Kalla<span class="text-xs text-blue-400 underline ml-2 opacity-0 group-hover:opacity-100">Lihat Timeline</span></p>
+                        <ul class="text-slate-600 text-sm leading-relaxed space-y-2 list-disc ml-4">
+                            <li>Berperan sebagai Backend Developer dengan tanggung jawab utama dalam membangun 
+RESTful API serta merancang alur pengolahan dan penyimpanan data.</li>
+                            <li> Mengembangkan replika Human Capital Information System (HCIS) PT. Hadji Kalla 
+untuk kebutuhan internal pembelajaran dan pengujian sistem.</li>
+                            <li>Merancang dan mengimplementasikan fitur FAQ interaktif pada website HCIS yang 
+memudahkan karyawan dalam mengakses informasi, sehingga meningkatkan efisiensi 
+pencarian informasi internal.</li>
+                        </ul>
+                    </div>
+
+                    <div onclick="showDetail('pmm')" class="group relative pl-8 border-l-2 border-slate-200 cursor-pointer transition-all duration-300 reveal">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 border-4 border-white shadow-sm group-hover:bg-blue-600 group-hover:scale-125 transition-all"></div>
+                        <p class="text-xs font-bold text-slate-400 uppercase mb-1">Feb 2023 – Mei 2023</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors">KPI :  Web Developer Intern</h3>
+                            <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-slate-500 font-medium mb-4">Fakultas Teknik, UNSULBAR<span class="text-xs text-blue-400 underline ml-2 opacity-0 group-hover:opacity-100">Lihat Timeline</span></p>
+                        <ul class="text-slate-600 text-sm leading-relaxed space-y-2 list-disc ml-4">
+                            <li>Merancang dan mengembangkan fitur aplikasi 
+magang berbasis web untuk memfasilitasi 
+pendaftaran dan pengelolaan data mahasiswa.</li>
+                            <li>Membuat dan mengoptimalkan database untuk 
+menyimpan informasi mahasiswa, perusahaan 
+mitra, dan laporan magang secara efisien. </li>
+                            <li>Melakukan pengujian aplikasi untuk 
+mengidentifikasi dan memperbaiki bug.</li>
+                        </ul>
+                    </div>
+
+                     <div onclick="showDetail('teknik')" class="group relative pl-8 border-l-2 border-slate-200 cursor-pointer transition-all duration-300 reveal">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 border-4 border-white shadow-sm group-hover:bg-blue-600 group-hover:scale-125 transition-all"></div>
+                        <p class="text-xs font-bold text-slate-400 uppercase mb-1">Sep 2022 – Feb 2023</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors">Program Pertukaran Mahasiswa Merdeka 2</h3>
+                            <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-slate-500 font-medium mb-4">PT. Hadji Kalla<span class="text-xs text-blue-400 underline ml-2 opacity-0 group-hover:opacity-100">Lihat Timeline</span></p>
+                        <ul class="text-slate-600 text-sm leading-relaxed space-y-2 list-disc ml-4">
+                            <li>Mengikuti Program Pertukaran Mahasiswa 
+Merdeka 2  selama satu semester.</li>
+                            <li>Mengembangkan Sistem "Sislaundry dan Triasih" 
+secara berkelompok</li>
+                        </ul>
+                    </div>
+
+                     <div onclick="showDetail('kmmi')" class="group relative pl-8 border-l-2 border-slate-200 cursor-pointer transition-all duration-300 reveal">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 border-4 border-white shadow-sm group-hover:bg-blue-600 group-hover:scale-125 transition-all"></div>
+                        <p class="text-xs font-bold text-slate-400 uppercase mb-1">Ags 2021 – Okt 2021</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors">KMMI: Pemasaran Digital</h3>
+                            <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-slate-500 font-medium mb-4">Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi<span class="text-xs text-blue-400 underline ml-2 opacity-0 group-hover:opacity-100">Lihat Timeline</span></p>
+                        <ul class="text-slate-600 text-sm leading-relaxed space-y-2 list-disc ml-4">
+                            <li>Terpilih sebagai peserta program nasional Kredensial Mikro Mahasiswa Indonesia (KMMI) bidang pemasaran digital.</li>
+                            <li>Mempelajari strategi pemasaran digital mencakup SEO, social media marketing, content marketing, dan digital advertising.</li>
+                            <li>Mengembangkan keterampilan praktis dalam merancang strategi promosi online untuk mendukung pemasaran produk dan layanan.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-24 px-6 bg-slate-900 text-white rounded-t-[3rem]">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-3xl font-extrabold mb-12 flex items-center gap-3">
+                    <i data-lucide="graduation-cap" class="text-blue-400"></i> Pendidikan
+                </h2>
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
+                    <p class="text-blue-400 font-bold mb-2">2020 - 2024</p>
+                    <h3 class="text-xl font-bold mb-1 text-white">S1 Teknik Informatika </h3>
+                    <p class="text-slate-400 mb-6">Universitas Sulawesi Barat </p>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-green-400"></i> IPK 3.93/4.00 
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="award" class="w-4 h-4 text-yellow-400"></i> Lulusan Terbaik Fakultas Teknik 2024 
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="star" class="w-4 h-4 text-blue-400"></i> Duta Favorit Unsulbar Teknik 2023 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <h2 class="text-3xl font-extrabold mb-12 flex items-center gap-3 text-white">
+                    <i data-lucide="users" class="text-blue-400"></i> Organisasi & Lainnya
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4 p-4 hover:bg-slate-800 rounded-2xl transition border border-transparent hover:border-slate-700">
+                        <div class="w-10 h-10 shrink-0 bg-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center">
+                            <i data-lucide="book-open"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Koordinator Bidang Akademik</h4>
+                            <p class="text-sm text-slate-400 tracking-tight">HMP Teknik Informatika</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-4 hover:bg-slate-800 rounded-2xl transition border border-transparent hover:border-slate-700">
+                        <div class="w-10 h-10 shrink-0 bg-indigo-500/20 text-indigo-400 rounded-xl flex items-center justify-center">
+                            <i data-lucide="user-plus"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Mentor</h4>
+                            <p class="text-sm text-slate-400 tracking-tight">Informatics Study Club </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-slate-900 border-t border-slate-800 text-center">
+        <p class="text-slate-500 text-xs font-medium uppercase tracking-widest">
+            &copy; 2026 Ahmad Afrisal 
+        </p>
+    </footer>
+    </main>
+
+    <div id="detail-view" class="detail-page fixed inset-0 bg-white z-[60] overflow-y-auto pt-24 px-6 fade-in">
+        <div class="max-w-4xl mx-auto pb-20">
+            <button onclick="closeDetail()" class="flex items-center gap-2 text-slate-500 hover:text-blue-600 font-bold mb-10 transition">
+                <i data-lucide="arrow-left"></i> Kembali ke Portfolio
+            </button>
+
+            <h2 id="detail-title" class="text-4xl font-extrabold mb-2 text-slate-900"></h2>
+            <p id="detail-subtitle" class="text-xl text-blue-600 font-medium mb-16"></p>
+
+            <div id="timeline-content" class="relative border-l-2 border-slate-100 ml-4 space-y-16">
+                </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+      var typed = new Typed('#typed-text', {
+        strings: ['Ahmad Afrisal', 'Programming', 'Volunteering', 'Human Resource'],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 2000,
+        loop: true,
+        cursorChar: '_',
+      });
+
+        // Data Timeline
+        const experienceDetails = {
+            kemenkop: {
+                title: "Project Management Officer",
+                subtitle: "Kementerian Koperasi",
+                journey: [
+                    {
+                        time: "Nov 2025",
+                        location: "Polewali Mandar",
+                        title: "Koordinasi Program Desa",
+                        desc: "Mengkoordinasikan pelaksanaan program Koperasi Merah Putih agar berjalan sesuai timeline dan target.",
+                        img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800"
+                    },
+                    {
+                        time: "Des 2025",
+                        location: "Kantor Kabupaten",
+                        title: "Sistem Pelaporan Digital",
+                        desc: "Merancang sistem pelaporan berbasis digital untuk transparansi data progres koperasi.",
+                        img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800"
+                    }
+                ]
+            },
+            tonasa: {
+                title: "Web Developer Intern",
+                subtitle: "PT. Semen Tonasa",
+                journey: [
+                    {
+                        time: "Maret 2025",
+                        location: "Pangkep / Remote",
+                        title: "Inisiasi HCIS",
+                        desc: "Mulai mengembangkan modul utama Human Capital Information System (HCIS).",
+                        img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800"
+                    }
+                ]
+            }
+        };
+
+        // Fungsi Show Detail
+        function showDetail(id) {
+            const data = experienceDetails[id];
+            if(!data) return;
+
+            document.getElementById('detail-title').innerText = data.title;
+            document.getElementById('detail-subtitle').innerText = data.subtitle;
+            
+            const timeline = document.getElementById('timeline-content');
+            timeline.innerHTML = ''; 
+
+            data.journey.forEach((item) => {
+                timeline.innerHTML += `
+                    <div class="relative pl-10 reveal-item">
+                        <div class="absolute -left-[11px] top-0 w-5 h-5 bg-blue-600 rounded-full border-4 border-white shadow-sm"></div>
+                        <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                            <span class="text-xs font-bold text-blue-600 uppercase">${item.time} | ${item.location}</span>
+                            <h4 class="text-xl font-bold mt-1 mb-3 text-slate-800">${item.title}</h4>
+                            <img src="${item.img}" class="w-full h-48 object-cover rounded-2xl mb-4 shadow-inner" alt="activity">
+                            <p class="text-slate-600 text-sm leading-relaxed">${item.desc}</p>
+                        </div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('main-content').style.display = 'none';
+            document.getElementById('detail-view').style.display = 'block';
+            window.scrollTo(0, 0);
+            lucide.createIcons();
+            initReveal(); 
+        }
+
+        function closeDetail() {
+            document.getElementById('main-content').style.display = 'block';
+            document.getElementById('detail-view').style.display = 'none';
+            initReveal();
+        }
+
+        // Scroll Reveal Logic
+        function initReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal, .reveal-item').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Initialize on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            initReveal();
+
+            // Navbar effect
+            window.addEventListener('scroll', () => {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 50) {
+                    nav.classList.add('py-2', 'shadow-sm');
+                    nav.classList.remove('py-4');
+                } else {
+                    nav.classList.remove('py-2', 'shadow-sm');
+                    nav.classList.add('py-4');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
