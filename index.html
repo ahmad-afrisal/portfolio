@@ -26,6 +26,11 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        /* Styling untuk Sertifikat & Project */
+        .cert-card:hover .cert-overlay { opacity: 1; }
+        .filter-btn.active { background-color: #2563eb; color: white; border-color: #2563eb; }
+        .modal-open { overflow: hidden; }
     </style>
 </head>
 <body class="bg-[#FBFBFE] text-slate-900 leading-relaxed">
@@ -38,6 +43,8 @@
                     <a href="#about" class="hover:text-blue-600 transition">Profil</a>
                     <a href="#skills" class="hover:text-blue-600 transition">Keahlian</a>
                     <a href="#experience" class="hover:text-blue-600 transition">Pengalaman</a>
+                    <a href="#certificates" class="hover:text-blue-600 transition">Sertifikat</a>
+                    <a href="#projects" class="hover:text-blue-600 transition">Projek</a>
                     <a href="#education" class="hover:text-blue-600 transition">Pendidikan</a>
                 </div>
                 <a href="mailto:ahmadafrisal2002@gmail.com" class="px-5 py-2.5 bg-slate-900 text-white text-sm font-bold rounded-full hover:bg-blue-600 transition shadow-sm">
@@ -107,59 +114,6 @@
             </div>
         </section>
 
-        <!-- <section id="about" class="pt-44 pb-24 px-6 reveal">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="mb-8 relative inline-block">
-                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-3xl overflow-hidden border-4 border-white shadow-2xl mx-auto">
-                        <img src="https://via.placeholder.com/160" alt="Ahmad Afrisal" class="w-full h-full object-cover">
-                    </div>
-                    <div class="absolute -bottom-2 -right-2 bg-blue-600 text-white p-2 rounded-xl shadow-lg">
-                        <i data-lucide="code-2" class="w-5 h-5"></i>
-                    </div>
-                </div>
-
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-100 mb-8 shadow-sm">
-                    <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
-                    </span>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-blue-600">Siap Berkontribusi</span>
-                </div>
-
-                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 min-h-[1.2em]">
-                    <span id="typed-text"></span>
-                </h1>
-
-                <p class="text-lg md:text-xl text-slate-500 mb-10 max-w-2xl mx-auto">
-                    Lulusan Teknik Informatika dengan minat besar dalam pengembangan perangkat lunak dan analisis data. Berpengalaman dalam menyelesaikan proyek berbasis web dan implementasi algoritma.
-                </p>
-
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="https://linkedin.com/in/ahmadafrisal" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
-                        <i data-lucide="linkedin"></i>
-                    </a>
-                    <a href="https://github.com/ahmad-afrisal" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
-                        <i data-lucide="github"></i>
-                    </a>
-                    <a href="mailto:ahmadafrisal2002@gmail.com" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
-                        <i data-lucide="mail"></i>
-                    </a>
-                    <a href="https://medium.com/@official.bangk.id" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
-                        <i data-lucide="newspaper"></i>
-                    </a>
-                    <a href="https://wa.me/6285156090250" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
-                        <i data-lucide="message-circle"></i>
-                    </a>
-                    <a href="https://instagram.com/ahmad_afrisal" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
-                        <i data-lucide="instagram"></i>
-                    </a>
-                    <a href="https://tiktok.com/@ayysalll" target="_blank" class="p-3 bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all text-slate-600">
-                        <i data-lucide="music-2"></i>
-                    </a>
-                </div>
-            </div>
-        </section> -->
-
         <section id="skills" class="py-24 px-6 bg-white border-y border-slate-100 reveal">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-3xl font-extrabold text-center mb-16">Technical Mastery</h2>
@@ -222,7 +176,14 @@
                         <p class="text-slate-500 font-medium mb-4">Kementerian Koperasi <span class="text-xs text-blue-400 underline ml-2 opacity-0 group-hover:opacity-100">Lihat Timeline</span></p>
                         <ul class="text-slate-600 text-sm leading-relaxed space-y-2 list-disc ml-4">
                             <li>Mengkoordinasikan dan memantau pelaksanaan program Koperasi Merah Putih di tingkat desa dan kecamatan.</li>
-                            <li>Merancang dan mengembangkan sistem pelaporan serta monitoring tingkat kabupaten.</li>
+                            <li>Merancang dan mengembangkan sistem pelaporan serta monitoring Koperasi Merah Putih 
+tingkat kabupaten, sebagai alat kontrol progres, transparansi data, dan evaluasi kinerja 
+koperasi.</li>
+<li>Mengolah, menganalisis, dan menyajikan data capaian koperasi ke dalam laporan berkala 
+sebagai bahan pengambilan keputusan dan perumusan kebijakan.</li>
+                            <li>Menjadi penghubung antara pengurus koperasi, pendamping lapangan, dan pemangku 
+kepentingan, guna memastikan koordinasi, komunikasi, dan implementasi program 
+berjalan efektif.</li>
                         </ul>
                     </div>
 
@@ -230,13 +191,18 @@
                         <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 border-4 border-white shadow-sm group-hover:bg-blue-600 group-hover:scale-125 transition-all"></div>
                         <p class="text-xs font-bold text-slate-400 uppercase mb-1">Mar 2025 - Ags 2025</p>
                         <div class="flex items-center gap-2 mb-3">
-                            <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors">Magenta : Web Developer Intern</h3>
+                            <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors">Magenta : Staff of HC Operational</h3>
                             <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"></i>
                         </div>
                         <p class="text-slate-500 font-medium mb-4">PT. Semen Tonasa <span class="text-xs text-blue-400 underline ml-2 opacity-0 group-hover:opacity-100">Lihat Timeline</span></p>
                         <ul class="text-slate-600 text-sm leading-relaxed space-y-2 list-disc ml-4">
-                            <li>Mengembangkan dan mengimplementasikan sistem Human Capital Information System (HCIS).</li>
-                            <li>Melakukan testing dan debugging website secara menyeluruh.</li>
+                            <li>Mengembangkan dan mengimplementasikan sistem Human Capital Information System 
+(HCIS) untuk memudahkan pengelolaan data karyawan secara digital.</li>
+                            <li>Menerapkan solusi teknologi untuk meningkatkan efisiensi dan akurasi dalam proses 
+pengelolaan data sumber daya manusia.</li>
+<li>Melakukan testing dan debugging website secara menyeluruh, menguatkan ketelitian dan 
+kemampuan pemecahan masalah (problem-solving) dalam menemukan dan memperbaiki 
+error.</li>
                         </ul>
                     </div>
 
@@ -316,7 +282,7 @@ mengidentifikasi dan memperbaiki bug.</li>
                             <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors">Program Pertukaran Mahasiswa Merdeka 2</h3>
                             <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"></i>
                         </div>
-                        <p class="text-slate-500 font-medium mb-4">PT. Hadji Kalla<span class="text-xs text-blue-400 underline ml-2 opacity-0 group-hover:opacity-100">Lihat Timeline</span></p>
+                        <p class="text-slate-500 font-medium mb-4">Universitas Amikom Yogyakarta<span class="text-xs text-blue-400 underline ml-2 opacity-0 group-hover:opacity-100">Lihat Timeline</span></p>
                         <ul class="text-slate-600 text-sm leading-relaxed space-y-2 list-disc ml-4">
                             <li>Mengikuti Program Pertukaran Mahasiswa 
 Merdeka 2  selama satu semester.</li>
@@ -344,7 +310,96 @@ secara berkelompok</li>
             </div>
         </section>
 
-        <section id="education" class="py-24 px-6 bg-slate-900 text-white rounded-t-[3rem]">
+        <section id="certificates" class="py-24 px-6 bg-white reveal">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold mb-4">Sertifikasi & Lisensi</h2>
+            <div class="flex flex-wrap justify-center gap-3 mb-10" id="cert-filters">
+                <button class="filter-btn active px-6 py-2 rounded-full border border-slate-200 text-sm font-bold transition" onclick="filterCerts('all')">Semua</button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-slate-200 text-sm font-bold transition" onclick="filterCerts('web')">Web Dev</button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-slate-200 text-sm font-bold transition" onclick="filterCerts('pm')">Project Management</button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-slate-200 text-sm font-bold transition" onclick="filterCerts('pendamping')">Pendamping</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="cert-container">
+            </div>
+
+        <div class="mt-12 text-center">
+            <button id="load-more-certs" onclick="loadMoreCerts()" class="px-8 py-3 bg-slate-100 text-slate-700 font-bold rounded-xl hover:bg-blue-600 hover:text-white transition">
+                Muat Lebih Banyak
+            </button>
+        </div>
+    </div>
+</section>
+
+    <section id="projects" class="py-24 px-6 bg-[#FBFBFE] reveal border-t border-slate-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl font-extrabold mb-2">Proyek Pilihan</h2>
+                    <p class="text-slate-500">Implementasi solusi digital dan pengembangan sistem.</p>
+                </div>
+                <a href="https://github.com/ahmad-afrisal" target="_blank" class="flex items-center gap-2 text-blue-600 font-bold hover:underline">
+                    Lihat Semua di GitHub <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group bg-white rounded-3xl border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="aspect-video bg-slate-200 relative overflow-hidden">
+                        <img src="images/project/cc-kdkmp-polma.png" alt="cc kdkmp polman" class="object-cover w-full h-full group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase rounded-md">Laravel</span>
+                            <span class="px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold uppercase rounded-md">Tailwind</span>
+                            <span class="px-3 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold uppercase rounded-md">MySQL</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition">Command Center KDKMP POLMAN</h3>
+                        <p class="text-slate-500 text-sm mb-6">Sistem pusat kendali digital untuk memantau, menganalisis, dan memvisualisasikan perkembangan Koperasi Desa/Kelurahan Merah Putih secara terpadu, akurat, dan berbasis data..</p>
+                        <a href="https://gis-kdkmp-polman.web.id/" target="_blank" class="inline-flex items-center gap-2 font-bold text-sm text-slate-900">
+                            View Live Project <i data-lucide="external-link" class="w-4 h-4 text-blue-600"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-3xl border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="aspect-video bg-slate-200 relative overflow-hidden">
+                        <img src="images/project/badminton-score.png" alt="Badminton Score" class="object-cover w-full h-full group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-600 text-[10px] font-bold uppercase rounded-md">Tailwind</span>
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-600 text-[10px] font-bold uppercase rounded-md">Javascript</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition">Badminton Score</h3>
+                        <p class="text-slate-500 text-sm mb-6">Sistem skor wasit bulu tangkis digital yang menyediakan antarmuka pencatatan skor secara real-time dan jelas untuk mendukung perwasitan pertandingan yang adil dan efisien..</p>
+                        <a href="https://ahmad-afrisal.github.io/badminton-score/" target="_blank" class="inline-flex items-center gap-2 font-bold text-sm text-slate-900">
+                            View Live Project <i data-lucide="external-link" class="w-4 h-4 text-blue-600"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="cert-modal" class="fixed inset-0 bg-slate-900/90 z-[100] hidden flex items-center justify-center p-6 backdrop-blur-sm" onclick="closeCertModal()">
+        <div class="max-w-4xl w-full relative" onclick="event.stopPropagation()">
+            <button onclick="closeCertModal()" class="absolute -top-12 right-0 text-white hover:text-blue-400">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <img id="modal-img" src="" alt="Certificate" class="w-full h-auto rounded-lg shadow-2xl">
+            <div class="mt-4 flex justify-between items-center text-white">
+                <h4 id="modal-title" class="text-xl font-bold"></h4>
+                <a id="modal-link" href="#" target="_blank" class="px-4 py-2 bg-blue-600 rounded-lg text-sm font-bold flex items-center gap-2">
+                    Verifikasi Sertifikat <i data-lucide="shield-check" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="education" class="py-24 px-6 bg-slate-900 text-white rounded-t-[3rem]">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
             <div>
                 <h2 class="text-3xl font-extrabold mb-12 flex items-center gap-3">
@@ -364,6 +419,7 @@ secara berkelompok</li>
                         <li class="flex items-center gap-2">
                             <i data-lucide="star" class="w-4 h-4 text-blue-400"></i> Duta Favorit Unsulbar Teknik 2023 
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -396,6 +452,8 @@ secara berkelompok</li>
             </div>
         </div>
     </section>
+
+
 
     <footer class="py-12 bg-slate-900 border-t border-slate-800 text-center">
         <p class="text-slate-500 text-xs font-medium uppercase tracking-widest">
@@ -536,6 +594,79 @@ secara berkelompok</li>
                     nav.classList.add('py-4');
                 }
             });
+        });
+
+        // DATA SERTIFIKAT
+        const allCertificates = [
+            { title: "MBKM Desa Cemara Batch 4", category: "pendamping", img: "images/certificate/cemara.jpg", link: "#" },
+            { title: "Peningkatan Kompetensi Pendamping KDKMP", category: "pendamping", img: "images/certificate/pendamping-koperasi.jpg", link: "#" },
+            { title: "Pengembangan Talenta PMO KDKMP", category: "pendamping", img: "images/certificate/esq-koperasi.jpeg", link: "#" },
+            { title: "Design Sprint with Figma", category: "dweb", img: "images/certificate/learn-design-sprint-with-figma-healthcare-app.jpg", link: "#" },
+            { title: "Product Management", category: "web", img: "images/certificate/product-management.jpg", link: "#" },
+            { title: "Full Stack Web Developer", category: "web", img: "images/certificate/full-stack-web-developer-toko-online.jpg", link: "#" },
+            { title: "SASS Workshop", category: "web", img: "images/certificate/sass-workshop.jpg", link: "#" },
+            { title: "MSIB: Web Developer", category: "web", img: "images/certificate/msib.jpeg", link: "#" },
+        ];
+
+        let visibleCerts = 6;
+        let currentFilter = 'all';
+
+        function renderCertificates() {
+            const container = document.getElementById('cert-container');
+            container.innerHTML = '';
+            
+            const filtered = allCertificates.filter(c => currentFilter === 'all' || c.category === currentFilter);
+            const toDisplay = filtered.slice(0, visibleCerts);
+
+            toDisplay.forEach(cert => {
+                container.innerHTML += `
+                    <div class="group relative bg-slate-100 rounded-2xl overflow-hidden cursor-pointer cert-card shadow-sm" onclick="openCertModal('${cert.img}', '${cert.title}', '${cert.link}')">
+                        <img src="${cert.img}" alt="${cert.title}" class="w-full h-48 object-cover">
+                        <div class="cert-overlay absolute inset-0 bg-blue-600/90 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4 text-center">
+                            <i data-lucide="zoom-in" class="mb-2"></i>
+                            <h4 class="font-bold text-sm">${cert.title}</h4>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Toggle Button Load More
+            const btn = document.getElementById('load-more-certs');
+            btn.style.display = visibleCerts >= filtered.length ? 'none' : 'inline-block';
+            lucide.createIcons();
+        }
+
+        function filterCerts(category) {
+            currentFilter = category;
+            visibleCerts = 6;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText === 'Semua'));
+            });
+            renderCertificates();
+        }
+
+        function loadMoreCerts() {
+            visibleCerts += 3;
+            renderCertificates();
+        }
+
+        // Modal Logic
+        function openCertModal(img, title, link) {
+            document.getElementById('modal-img').src = img;
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-link').href = link;
+            document.getElementById('cert-modal').classList.remove('hidden');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeCertModal() {
+            document.getElementById('cert-modal').classList.add('hidden');
+            document.body.classList.remove('modal-open');
+        }
+
+        // Inisialisasi awal (Panggil di dalam DOMContentLoaded atau di akhir script)
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCertificates();
         });
     </script>
 </body>
