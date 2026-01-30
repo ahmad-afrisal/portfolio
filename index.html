@@ -39,6 +39,7 @@
         <nav class="fixed w-full z-50 glass-nav border-b border-slate-100">
             <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
                 <span class="text-xl font-extrabold tracking-tighter text-blue-600">A. AFRISAL.</span>
+                
                 <div class="hidden md:flex space-x-10 text-sm font-semibold text-slate-600">
                     <a href="#about" class="hover:text-blue-600 transition">Profil</a>
                     <a href="#skills" class="hover:text-blue-600 transition">Keahlian</a>
@@ -47,11 +48,45 @@
                     <a href="#projects" class="hover:text-blue-600 transition">Projek</a>
                     <a href="#education" class="hover:text-blue-600 transition">Pendidikan</a>
                 </div>
-                <a href="mailto:ahmadafrisal2002@gmail.com" class="px-5 py-2.5 bg-slate-900 text-white text-sm font-bold rounded-full hover:bg-blue-600 transition shadow-sm">
-                    Kontak
-                </a>
+
+                <div class="flex items-center gap-4">
+                    <a href="mailto:ahmadafrisal2002@gmail.com" class="hidden md:block px-5 py-2.5 bg-slate-900 text-white text-sm font-bold rounded-full hover:bg-blue-600 transition shadow-sm">
+                        Kontak
+                    </a>
+                    
+                    <button id="menu-btn" class="md:hidden p-2 text-slate-600 hover:text-blue-600 transition">
+                        <i data-lucide="menu" id="menu-icon"></i>
+                    </button>
+                </div>
             </div>
+
+            
         </nav>
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-[100] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+                <div class="flex flex-col h-full p-8">
+                    <div class="flex justify-between items-center mb-12">
+                        <span class="text-xl font-extrabold tracking-tighter text-blue-600">A. AFRISAL.</span>
+                        <button id="close-btn" class="p-2 text-slate-600 hover:bg-slate-50 rounded-full transition">
+                            <i data-lucide="x" class="w-8 h-8"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="flex flex-col space-y-8">
+                        <a href="#about" class="mobile-link text-xl font-bold text-slate-800 hover:text-blue-600 transition">Profil</a>
+                        <a href="#skills" class="mobile-link text-xl font-bold text-slate-800 hover:text-blue-600 transition">Keahlian</a>
+                        <a href="#experience" class="mobile-link text-xl font-bold text-slate-800 hover:text-blue-600 transition">Pengalaman</a>
+                        <a href="#certificates" class="mobile-link text-xl font-bold text-slate-800 hover:text-blue-600 transition">Sertifikat</a>
+                        <a href="#projects" class="mobile-link text-xl font-bold text-slate-800 hover:text-blue-600 transition">Projek</a>
+                        <a href="#education" class="mobile-link text-xl font-bold text-slate-800 hover:text-blue-600 transition">Pendidikan</a>
+                    </div>
+
+                    <div class="mt-auto pb-10">
+                        <a href="mailto:ahmadafrisal2002@gmail.com" class="w-full py-4 bg-slate-900 text-white text-center rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-blue-600 transition shadow-lg">
+                            <i data-lucide="mail" class="w-5 h-5"></i> Hubungi Saya
+                        </a>
+                    </div>
+                </div>
+            </div>
 
         <section id="about" class="pt-32 pb-24 px-6 reveal">
             <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
@@ -488,6 +523,31 @@ secara berkelompok</li>
         cursorChar: '_',
       });
 
+    //   Menu
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    // Fungsi Buka Menu
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden'; // Kunci scroll saat menu buka
+    });
+
+    // Fungsi Tutup Menu
+    const hideMenu = () => {
+        mobileMenu.classList.add('translate-x-full');
+        document.body.style.overflow = ''; // Aktifkan kembali scroll
+    };
+
+    closeBtn.addEventListener('click', hideMenu);
+
+    // Tutup menu otomatis saat link diklik
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', hideMenu);
+    });
+
         // Data Timeline
         const experienceDetails = {
             kemenkop: {
@@ -668,6 +728,9 @@ secara berkelompok</li>
         document.addEventListener('DOMContentLoaded', () => {
             renderCertificates();
         });
+
+
+        // 
     </script>
 </body>
 </html>
