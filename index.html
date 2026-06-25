@@ -394,6 +394,51 @@
 
           <div class="space-y-12">
             <div
+              onclick="showDetail('kemenpkp')"
+              class="group relative pl-8 border-l-2 border-blue-100 cursor-pointer transition-all duration-300 reveal"
+            >
+              <div
+                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow-sm group-hover:scale-125 transition-transform"
+              ></div>
+              <p class="text-xs font-bold text-blue-600 uppercase mb-1">
+                Jun 2026 - Skrng
+              </p>
+              <div class="flex items-center gap-2 mb-3">
+                <h3
+                  class="text-xl font-bold group-hover:text-blue-600 transition-colors"
+                >
+                  TFL Pemberdayaan
+                </h3>
+                <i
+                  data-lucide="external-link"
+                  class="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"
+                ></i>
+              </div>
+              <p class="text-slate-500 font-medium mb-4">
+                Kementerian PKP
+                <span
+                  class="text-xs text-blue-400 underline ml-2 opacity-0 group-hover:opacity-100"
+                  >Lihat Timeline</span
+                >
+              </p>
+              <ul
+                class="text-slate-600 text-sm leading-relaxed space-y-2 list-disc ml-4"
+              >
+                <li>
+                  Melakukan Sosialisasi, Penyuluhan, Verifikasi dan Pembekalan
+                  Masyarakat.
+                </li>
+                <li>
+                  Mendampingi Calon Penerima BSPS dalam penyusunan dan pengajuan
+                  proposal
+                </li>
+                <li>
+                  Mendampingi Penerima BSPS dalam pemanfaatan BSPS dan
+                  penyusunan laporan pertanggungjawaban kegiatan BSPS
+                </li>
+              </ul>
+            </div>
+            <div
               onclick="showDetail('kemenkop')"
               class="group relative pl-8 border-l-2 border-blue-100 cursor-pointer transition-all duration-300 reveal"
             >
@@ -1283,6 +1328,26 @@
 
       // Data Timeline
       const experienceDetails = {
+        kemenpkp: {
+          title: "TFL Pemberdayaan",
+          subtitle: "Kementerian PKP",
+          journey: [
+            {
+              time: "Jun 2026",
+              location: "Mamuju",
+              title: "Koordinasi Program",
+              // desc: "Mengkoordinasikan pelaksanaan program Koperasi Merah Putih agar berjalan sesuai timeline dan target.",
+              // img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800",
+            },
+            {
+              time: "Jun 2026",
+              location: "Mamuju",
+              title: "Verifikasi Lapangan",
+              // desc: "Merancang sistem pelaporan berbasis digital untuk transparansi data progres koperasi.",
+              // img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800",
+            },
+          ],
+        },
         kemenkop: {
           title: "Project Management Officer",
           subtitle: "Kementerian Koperasi",
